@@ -6,6 +6,7 @@
 
 ## 📚 Оглавление / Table of Contents
 1. [Bubble Sort / Сортировка пузырьком](#bubble-sort--сортировка-пузырьком)
+2. [Insertion Sort / Сортировка вставками](#insertion-sort--сортировка-вставками)
 
 
 ---
@@ -13,8 +14,11 @@
 ## 🗂 Структура проекта / Project Structure
 ```
 /python/sorting/bubble_sort.py
+                insertion_sort.py
 /java/sorting/BubbleSort.java
+              InsertionSort.java
 /javascript/sorting/bubble_sort.js
+                    insertion_sort.js
 
 ```
 
@@ -45,5 +49,32 @@ In the worst case, its time complexity is **O(n²)**, so it should only be used 
 - Python: `python/sorting/bubble_sort.py`
 - Java: `java/sorting/BubbleSort.java`
 - JavaScript: `javascript/sorting/bubble_sort.js`
+
+---
+
+## Insertion Sort / Сортировка вставками
+
+**EN:**  
+The basic idea of insertion sort is that at each iteration we take the next element from the unsorted part of the list and insert it into the correct position in the sorted part.  
+In the best case (already sorted array), the algorithm runs in **O(n)**.  
+In the worst case (reverse order), it runs in **O(n²)**.
+
+**RU:**  
+Основная идея сортировки вставками заключается в том, что на каждой итерации мы берём следующий элемент из неотсортированной части массива и вставляем его на нужное место в отсортированной части.  
+В лучшем случае (массив уже отсортирован) алгоритм работает за **O(n)**.  
+В худшем случае (обратный порядок) — за **O(n²)**.
+
+---
+
+### 📌 Сложность / Complexity
+- Time: **O(n²)** worst case, **O(n)** best case
+- Space: **O(1)**
+
+
+### 💻 Примеры кода / Example code
+Ссылки на файлы :
+- Python: `python/sorting/insertion_sort.py`
+- Java: `java/sorting/InsertionSort.java`
+- JavaScript: `javascript/sorting/insertion_sort.js`
 
 ---

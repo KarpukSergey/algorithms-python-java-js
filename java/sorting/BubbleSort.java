@@ -11,9 +11,8 @@ EN: Compares adjacent elements and swaps them if they are in the wrong order.
 - Память / Space: O(1)
 */
 
-package java.sorting;
 
-public class Bubble_sort {
+public class BubbleSort {
 
     public static void bubbleSort(int[] arr) {
         int n = arr.length;
