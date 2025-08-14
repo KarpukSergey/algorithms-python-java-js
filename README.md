@@ -7,6 +7,7 @@
 ## 📚 Оглавление / Table of Contents
 1. [Bubble Sort / Сортировка пузырьком](#bubble-sort--сортировка-пузырьком)
 2. [Insertion Sort / Сортировка вставками](#insertion-sort--сортировка-вставками)
+3. [Merge Sort / Сортировка слиянием](#merge-sort--сортировка-слиянием)
 
 
 ---
@@ -15,10 +16,13 @@
 ```
 /python/sorting/bubble_sort.py
                 insertion_sort.py
+                merge_sort.py
 /java/sorting/BubbleSort.java
               InsertionSort.java
+              MergeSort.java
 /javascript/sorting/bubble_sort.js
                     insertion_sort.js
+                    merge_sort.js
 
 ```
 
@@ -76,5 +80,30 @@ In the worst case (reverse order), it runs in **O(n²)**.
 - Python: `python/sorting/insertion_sort.py`
 - Java: `java/sorting/InsertionSort.java`
 - JavaScript: `javascript/sorting/insertion_sort.js`
+
+---
+
+
+
+## Merge Sort / Сортировка слиянием
+
+**EN:**  
+We have studied two sorting algorithms: bubble sort and insertion sort. Both of them perform better if the data is already partially sorted. The third algorithm we will look at is merge sort , developed in 1940 by John von Neumann. **The distinguishing feature of this algorithm is the fact that its performance does not depend on the ordering of the input data**. Like MapReduce and other big data processing algorithms, it is based on a divide and conquer strategy.
+
+**RU:**  
+Мы изучили два алгоритма сортировки: пузырьком и вставками. Производительность обоих будет лучше, если данные уже частично отсортированы. Третий алгоритм, с которым мы познакомимся, — алгоритм сортировки слиянием , разработанный в 1940 году Джоном фон Нейманом. **Отличительной чертой этого алгоритма является тот факт, что его производительность не зависит от упорядоченности входных данных**. Подобно MapReduce и другим алгоритмам обработки больших данных, в его основе лежит стратегия «разделяй и властвуй».
+
+---
+
+### 📌 Сложность / Complexity
+- Time: **O(n lon n)** 
+- Space: **O(n)**
+
+
+### 💻 Примеры кода / Example code
+Ссылки на файлы :
+- Python: `python/sorting/merge_sort.py`
+- Java: `java/sorting/MergeSort.java`
+- JavaScript: `javascript/sorting/merge_sort.js`
 
 ---
