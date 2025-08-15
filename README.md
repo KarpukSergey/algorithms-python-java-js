@@ -14,20 +14,33 @@
 
 ## 🗂 Структура проекта / Project Structure
 ```
-/python/sorting/bubble_sort.py
-                insertion_sort.py
-                merge_sort.py
-                shell_sort.py
-/java/sorting/BubbleSort.java
-              InsertionSort.java
-              MergeSort.java
-              ShellSort.java
-/javascript/sorting/bubble_sort.js
-                    insertion_sort.js
-                    merge_sort.js
-                    shell_sort.js
+/python/sorting/-|bubble_sort.py
+                 |insertion_sort.py
+                 |merge_sort.py
+                 |shell_sort.py
+                 |selection_sort.py
+/java/sorting/-|BubbleSort.java
+               |InsertionSort.java
+               |MergeSort.java
+               |ShellSort.java
+               |SelectionSort.java
+/javascript/sorting/-|bubble_sort.js
+                     |insertion_sort.js
+                     |merge_sort.js
+                     |shell_sort.js
+                     |selection_sort.ja
 
 ```
+---
+
+### Выбор алгоритма сортировки
+
+Выбор правильного алгоритма сортировки зависит как от размера, так и от состояния имеющихся входных данных. 
+Для небольших отсортированных списков использование продвинутого алгоритма приведет к ненужному усложнению
+кода при незначительном приросте производительности. Например, не следует использовать сортировку слиянием для небольших наборов данных. Сортировка пузырьком будет намного проще как для понимания‚ так для и реализации.
+Если данные частично отсортированы, мы можем воспользоваться этим преимуществом и применить сортировку вставкой. Для больших наборов данных лучше всего использовать алгоритм сортировки слиянием
+
+---
 
 ---
 
@@ -143,5 +156,38 @@ Ideally, the list is completely sorted, then only one pass through N elements is
 - Python: `python/sorting/shell_sort.py`
 - Java: `java/sorting/ShellSort.java`
 - JavaScript: `javascript/sorting/shell_sort.js`
+
+---
+
+## Selection Sort / Сортировка выбором 
+
+**EN:**  
+As we have seen, bubble sort is one of the simplest sorting algorithms.
+Selection sort is an improved version of it. With it, we try to minimize the total number of
+exchanges of variable values. Each pass performs one exchange (compare to N – 1 in bubble sort). Instead of moving the largest value in small steps, we look for it at each iteration and put it at the end of the list.
+This means that the first pass will result in the largest value being on the right, and the second pass will move the next largest value to it. As the algorithm runs, subsequent elements will be moved to the right place according to their value.
+The last element will be moved after the (N – 1)th pass. Thus, selection sort requires N – 1 passes to
+sort N elements
+
+**RU:**  
+Как мы выяснили, сортировка пузырьком является одним из простейших алгоритмов сортировки. 
+Сортировка выбором — это его улучшенная версия. С ее помощью мы стараемся минимизировать общее количество
+обменов значений переменных. За каждый проход выполняется один обмен (сравните с N – 1 в случае сортировки пузырьком). Вместо того чтобы перемещать наибольшее значение маленькими шагами, мы ищем его на каждой итерации и ставим в конец списка. 
+Это значит, что в результате первого прохода наибольшее значение окажется справа, а в результате второго прохода
+к нему переместится следующее по величине значение. По мере выполнения алгоритма последующие элементы будут перемещаться в нужное место согласно их значению. 
+Последний элемент будет перемещен после (N – 1)-го прохода. Таким образом, сортировка выбором требует N – 1 проходов для
+сортировки N элементов
+---
+
+### 📌 Сложность / Complexity
+- Time: **O(n2)** 
+- Space: **O(1)**
+
+
+### 💻 Примеры кода / Example code
+Ссылки на файлы :
+- Python: `python/sorting/selection_sort.py`
+- Java: `java/sorting/SelectionSort.java`
+- JavaScript: `javascript/sorting/selection_sort.js`
 
 ---
