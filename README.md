@@ -8,7 +8,7 @@
 1. [Bubble Sort / Сортировка пузырьком](#bubble-sort--сортировка-пузырьком)
 2. [Insertion Sort / Сортировка вставками](#insertion-sort--сортировка-вставками)
 3. [Merge Sort / Сортировка слиянием](#merge-sort--сортировка-слиянием)
-
+4. [Shell Sort / Сортировка шелла](#shell-sort--сортировка-шелла)
 
 ---
 
@@ -17,12 +17,15 @@
 /python/sorting/bubble_sort.py
                 insertion_sort.py
                 merge_sort.py
+                shell_sort.py
 /java/sorting/BubbleSort.java
               InsertionSort.java
               MergeSort.java
+              ShellSort.java
 /javascript/sorting/bubble_sort.js
                     insertion_sort.js
                     merge_sort.js
+                    shell_sort.js
 
 ```
 
@@ -105,5 +108,40 @@ We have studied two sorting algorithms: bubble sort and insertion sort. Both of 
 - Python: `python/sorting/merge_sort.py`
 - Java: `java/sorting/MergeSort.java`
 - JavaScript: `javascript/sorting/merge_sort.js`
+
+---
+
+
+## Shell Sort / Сортировка Шелла
+
+**EN:**  
+Bubble Sort compares the values of adjacent elements and swaps them if they are not in the desired order.
+If the list is partially sorted, we get acceptable performance: the sort is complete as soon as the loop stops swapping values.
+In the case of a completely unsorted list of size N, the algorithm must make N – 1 full passes.
+Donald Shell proposed his sorting algorithm, questioning the need to select adjacent elements for comparison and swapping. The algorithm was called Shell Sort
+Shell Sort is not designed for large data. It is used for medium-sized data sets. Roughly speaking, the algorithm will give fairly good performance when working with a list containing up to 6000 elements.
+**If the data is partially sorted, the performance will be better**.
+Ideally, the list is completely sorted, then only one pass through N elements is required to check the order, which will provide the best performance **O(N)**.
+
+**RU:**  
+Алгоритм сортировки пузырьком сравнивает значения соседних элементов и меняет их местами, если они не стоят в нужном порядке. 
+Если список частично отсортирован, мы получаем приемлемую производительность: сортировка завершается, как только в цикле прекращается обмен значениями.
+В случае с полностью неотсортированным списком размера N алгоритм должен совершить N – 1 полных проходов.
+Дональд Шелл предложил свой алгоритм сортировки, поставив под сомнение необходимость выбора соседних элементов для сравнения и обмена. Алгоритм получил название сортировка Шелла
+Сортировка Шелла не предназначена для больших данных. Она используется для наборов данных среднего размера. Грубо говоря, алгоритм даст достаточно хорошую производительность при работе со списком, содержащим до 6000 элементов. 
+**Если данные частично упорядочены, производительность будет выше**. 
+В идеале список полностью отсортирован, тогда для проверки порядка потребуется только один проход через N элементов, что обеспечит наилучшую производительность **O(N)**.
+---
+
+### 📌 Сложность / Complexity
+- Time: **O(n)** 
+- Space: **O(n)**
+
+
+### 💻 Примеры кода / Example code
+Ссылки на файлы :
+- Python: `python/sorting/shell_sort.py`
+- Java: `java/sorting/ShellSort.java`
+- JavaScript: `javascript/sorting/shell_sort.js`
 
 ---
