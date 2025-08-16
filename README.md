@@ -5,10 +5,14 @@
 ---
 
 ## 📚 Оглавление / Table of Contents
+0. [Выбор алгоритма сортировки / Selecting a sorting algorithm](#выбор-алгоритма-сортировки--selecting-a-sorting-algorithm)
 1. [Bubble Sort / Сортировка пузырьком](#bubble-sort--сортировка-пузырьком)
 2. [Insertion Sort / Сортировка вставками](#insertion-sort--сортировка-вставками)
 3. [Merge Sort / Сортировка слиянием](#merge-sort--сортировка-слиянием)
 4. [Shell Sort / Сортировка шелла](#shell-sort--сортировка-шелла)
+5. [Selection Sort / Cортировка выбором](#selection-sort--сортировка-выбором)
+0. [Выбор алгоритма поиска / Selecting a search algorithm](#выбор-алгоритма-поиска--selecting-a-search-algorithm)
+1. [Linear Search / Линейный Поиск](#linear-search--линейный-поиск)
 
 ---
 
@@ -19,27 +23,32 @@
                  |merge_sort.py
                  |shell_sort.py
                  |selection_sort.py
+       /search/-|linear_search.py 
 /java/sorting/-|BubbleSort.java
                |InsertionSort.java
                |MergeSort.java
                |ShellSort.java
                |SelectionSort.java
+     /search/-|LinearSearch.java
 /javascript/sorting/-|bubble_sort.js
                      |insertion_sort.js
                      |merge_sort.js
                      |shell_sort.js
                      |selection_sort.ja
-
+           /search/-|linear_search.py
 ```
 ---
 
-### Выбор алгоритма сортировки
+### Выбор алгоритма сортировки / Selecting a sorting algorithm
 
-Выбор правильного алгоритма сортировки зависит как от размера, так и от состояния имеющихся входных данных. 
+**RU:**Выбор правильного алгоритма сортировки зависит как от размера, так и от состояния имеющихся входных данных. 
 Для небольших отсортированных списков использование продвинутого алгоритма приведет к ненужному усложнению
 кода при незначительном приросте производительности. Например, не следует использовать сортировку слиянием для небольших наборов данных. Сортировка пузырьком будет намного проще как для понимания‚ так для и реализации.
 Если данные частично отсортированы, мы можем воспользоваться этим преимуществом и применить сортировку вставкой. Для больших наборов данных лучше всего использовать алгоритм сортировки слиянием
 
+**EN:**Choosing the right sorting algorithm depends on both the size and the state of the input data.
+For small sorted lists, using an advanced algorithm will unnecessarily complicate the code with little performance gain. For example, merge sort should not be used for small data sets. Bubble sort will be much simpler to understand and implement.
+If the data is partially sorted, we can take advantage of this and use insertion sort. For large data sets, the merge sort algorithm is best
 ---
 
 ---
@@ -189,5 +198,50 @@ sort N elements
 - Python: `python/sorting/selection_sort.py`
 - Java: `java/sorting/SelectionSort.java`
 - JavaScript: `javascript/sorting/selection_sort.js`
+
+---
+
+---
+
+### Выбор алгоритма поиска / Selecting a search algorithm
+
+**RU:**
+Инструменты эффективного и точного поиска в структуре данных на практике имеют решающее значение. 
+В зависимости от выбранного алгоритма поиска вам может потребоваться предварительная сортировка данных. 
+Выбор подходящих алгоритмов сортировки и поиска зависит от типа и размера данных, а также от характера задачи, 
+которую вы пытаетесь решить.
+
+**EN:**
+Tools for efficient and accurate search in a data structure are crucial in practice.
+Depending on the search algorithm you choose, you may need to pre-sort your data.
+The choice of appropriate sorting and search algorithms depends on the type and size of the data, as well as the nature of the problem you are trying to solve.
+---
+
+---
+
+## Linear Search / Линейный поиск 
+
+**EN:**  
+One of the simplest strategies for searching data is to simply iterate through all the elements in search of the target.
+Each data point is searched for a match. If the searched data is found, the algorithm returns the result and exits the loop. Otherwise, it continues searching until it reaches the end of the data structure. The obvious disadvantage of this algorithm is that it is very slow, since it performs an exhaustive search.
+The advantage is that the data does not need to be sorted, as required by other algorithms.
+
+**RU:**  
+Одна из простейших стратегий поиска данных состоит в том, чтобы просто перебрать все элементы в поисках цели. 
+В каждой точке данных выполняется поиск совпадения. При обнаружении искомых данных алгоритм возвращает
+результат и выходит из цикла. В противном случае он продолжает поиск дотех пор, пока не достигнет конца структуры данных. Очевидным недостатком алгоритма является то, что он очень медленный, поскольку осуществляет исчерпывающий поиск. 
+Преимущество же заключается в том, что данные не нужно сортировать, как того требуют другие алгоритмы.
+---
+
+### 📌 Сложность / Complexity
+- Time: **O(n)** 
+- Space: **O(n)**
+
+
+### 💻 Примеры кода / Example code
+Ссылки на файлы :
+- Python: `python/search/linear_search.py`
+- Java: `java/search/LinearSearch.java`
+- JavaScript: `javascript/search/linear_search.js`
 
 ---
