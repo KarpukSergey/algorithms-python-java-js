@@ -13,6 +13,7 @@
 5. [Selection Sort / Cортировка выбором](#selection-sort--сортировка-выбором)
 0. [Выбор алгоритма поиска / Selecting a search algorithm](#выбор-алгоритма-поиска--selecting-a-search-algorithm)
 1. [Linear Search / Линейный Поиск](#linear-search--линейный-поиск)
+2. [Binary Search / Бинарный Поиск](#binary-search--бинарный-поиск)
 
 ---
 
@@ -23,19 +24,22 @@
                  |merge_sort.py
                  |shell_sort.py
                  |selection_sort.py
-       /search/-|linear_search.py 
+       /search/-|linear_search.py
+                |binary_search.py 
 /java/sorting/-|BubbleSort.java
                |InsertionSort.java
                |MergeSort.java
                |ShellSort.java
                |SelectionSort.java
      /search/-|LinearSearch.java
+              |BinarySearch.java
 /javascript/sorting/-|bubble_sort.js
                      |insertion_sort.js
                      |merge_sort.js
                      |shell_sort.js
                      |selection_sort.ja
            /search/-|linear_search.py
+                    |binary_search.py
 ```
 ---
 
@@ -153,6 +157,7 @@ Ideally, the list is completely sorted, then only one pass through N elements is
 Сортировка Шелла не предназначена для больших данных. Она используется для наборов данных среднего размера. Грубо говоря, алгоритм даст достаточно хорошую производительность при работе со списком, содержащим до 6000 элементов. 
 **Если данные частично упорядочены, производительность будет выше**. 
 В идеале список полностью отсортирован, тогда для проверки порядка потребуется только один проход через N элементов, что обеспечит наилучшую производительность **O(N)**.
+
 ---
 
 ### 📌 Сложность / Complexity
@@ -186,6 +191,7 @@ sort N elements
 к нему переместится следующее по величине значение. По мере выполнения алгоритма последующие элементы будут перемещаться в нужное место согласно их значению. 
 Последний элемент будет перемещен после (N – 1)-го прохода. Таким образом, сортировка выбором требует N – 1 проходов для
 сортировки N элементов
+
 ---
 
 ### 📌 Сложность / Complexity
@@ -215,6 +221,7 @@ sort N elements
 Tools for efficient and accurate search in a data structure are crucial in practice.
 Depending on the search algorithm you choose, you may need to pre-sort your data.
 The choice of appropriate sorting and search algorithms depends on the type and size of the data, as well as the nature of the problem you are trying to solve.
+
 ---
 
 ---
@@ -231,6 +238,7 @@ The advantage is that the data does not need to be sorted, as required by other 
 В каждой точке данных выполняется поиск совпадения. При обнаружении искомых данных алгоритм возвращает
 результат и выходит из цикла. В противном случае он продолжает поиск дотех пор, пока не достигнет конца структуры данных. Очевидным недостатком алгоритма является то, что он очень медленный, поскольку осуществляет исчерпывающий поиск. 
 Преимущество же заключается в том, что данные не нужно сортировать, как того требуют другие алгоритмы.
+
 ---
 
 ### 📌 Сложность / Complexity
@@ -243,5 +251,34 @@ The advantage is that the data does not need to be sorted, as required by other 
 - Python: `python/search/linear_search.py`
 - Java: `java/search/LinearSearch.java`
 - JavaScript: `javascript/search/linear_search.js`
+
+---
+
+---
+
+## Binary Search / Бинарный поиск
+
+**EN:**  
+A necessary condition for the binary search algorithm to work is that the data is ordered. The algorithm iteratively divides the list into two parts and tracks the lowest and highest indices until it finds the desired value.
+Binary (also called "binary") search is so named because at each iteration the algorithm divides the data into two parts.
+If the data contains N elements, the iteration will require at most O(logN) steps. This means that the algorithm has an execution time of **O(logN)**.
+
+**RU:**  
+Необходимым условием для работы алгоритма бинарного поиска является упорядоченность данных. Алгоритм итеративно делит список на две части и отслеживает самые низкие и самые высокие индексы, пока не найдет искомое значение.
+Бинарный (говорят также «двоичный») поиск назван так потому, что на каждой итерации алгоритм разделяет данные на две части. 
+Если данные содержат N элементов, для итерации потребуется максимум O(logN) шагов. Это означает, что алгоритм имеет время выполнения **O(logN)**.
+
+---
+
+### 📌 Сложность / Complexity
+- Time: **O(logN)** 
+- Space: **O(logN)**
+
+
+### 💻 Примеры кода / Example code
+Ссылки на файлы :
+- Python: `python/search/binary_search.py`
+- Java: `java/search/BinarySearch.java`
+- JavaScript: `javascript/search/binary_search.js`
 
 ---
