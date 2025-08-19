@@ -14,6 +14,7 @@
 0. [Выбор алгоритма поиска / Selecting a search algorithm](#выбор-алгоритма-поиска--selecting-a-search-algorithm)
 1. [Linear Search / Линейный Поиск](#linear-search--линейный-поиск)
 2. [Binary Search / Бинарный Поиск](#binary-search--бинарный-поиск)
+3. [interpolation Search / Интерполяционный Поиск](#interpolation-search--интерполяционный-поиск)
 
 ---
 
@@ -25,7 +26,8 @@
                  |shell_sort.py
                  |selection_sort.py
        /search/-|linear_search.py
-                |binary_search.py 
+                |binary_search.py
+                |interpolation_search.py 
 /java/sorting/-|BubbleSort.java
                |InsertionSort.java
                |MergeSort.java
@@ -33,13 +35,15 @@
                |SelectionSort.java
      /search/-|LinearSearch.java
               |BinarySearch.java
+              |InterpolationSearch.java
 /javascript/sorting/-|bubble_sort.js
                      |insertion_sort.js
                      |merge_sort.js
                      |shell_sort.js
-                     |selection_sort.ja
-           /search/-|linear_search.py
-                    |binary_search.py
+                     |selection_sort.js
+           /search/-|linear_search.js
+                    |binary_search.js
+                    |interpolation_search.js
 ```
 ---
 
@@ -280,5 +284,32 @@ If the data contains N elements, the iteration will require at most O(logN) step
 - Python: `python/search/binary_search.py`
 - Java: `java/search/BinarySearch.java`
 - JavaScript: `javascript/search/binary_search.js`
+
+---
+
+---
+
+## Interpolation search / Интерполяционный поиск
+
+**EN:**  
+Binary search is based on the logic that it focuses on the middle part of the data. Interpolation search is more complex. It uses a target value to estimate the position of an element in a sorted array. Let's try to understand this with an example. Suppose we want to find a word in the English dictionary, for example, river. We will use this information for interpolation and start searching for words starting with r.
+If the data is not uniformly distributed, the performance of the interpolation search algorithm will be poor. **The worst-case performance of this algorithm is O(N)**, **the best-case performance is O(log(log N))** if the data is fairly uniform.
+
+**RU:**  
+Бинарный поиск основан на логике, согласно которой он сосредотачивается на средней части данных. Интерполяционный поиск более сложен. Он использует целевое значение для оценки положения элемента в отсортированном массиве. Давайте попробуем понять это на примере. Предположим, мы хотим найти слово в словаре английского языка, например river. Мы будем использовать эту информацию для интерполяции и начнем поиск слов, начинающихся с r.
+Если данные распределены неравномерно, производительность алгоритма интерполяционного поиска будет низкой. **Наихудшая производительность этого алгоритма — O(N)**, **наилучшая — O (log(log N))**, если данные достаточно однородны.
+
+---
+
+### 📌 Сложность / Complexity
+- Time: **O(log(logN))** 
+- Space: **O(log(logN))**
+
+
+### 💻 Примеры кода / Example code
+Ссылки на файлы :
+- Python: `python/search/interpolation_search.py`
+- Java: `java/search/InterpolationSearch.java`
+- JavaScript: `javascript/search/interpolation_search.js`
 
 ---
